@@ -1,4 +1,6 @@
-# Installation
+# React MobX TypeScript
+
+## React Typescript used create-react-app
 
 ```shell
 npm install -g create-react-app
@@ -29,8 +31,20 @@ export class Name extends React.Component<INamePropType> {
 }
 ```
 
+## Add MobX
 
-# Create React App
+```shell
+yarn add mobx -S
+yarn add mobx-react -S
+```
+
+Add the following item to tsconfig.json
+
+```json
+    "experimentalDecorators": true
+```
+
+## Generating a project using create-react-app
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
