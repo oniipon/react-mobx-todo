@@ -1,13 +1,9 @@
 import * as React from 'react';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
+
 import './App.css';
 
-import logo from './logo.svg';
-
-// export class Name extends React.Component<INamePropType> {
-import { Name } from './components/Name';
-// export default class CountContainer extends React.Component {
-// It is not necessary to use '{}' if defined with default
-import CountContainer from './containers/CountContainer'; 
+import { About, Friends, Home } from './containers';
 
 /*
 class Welcome extends React.Component {
@@ -20,15 +16,18 @@ class App extends React.Component {
   public render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <Name member="Fumio SAGAWA"/>
-        <CountContainer />
+        <BrowserRouter>
+          <div>
+            <ul>
+              <li><Link to='/'>Home</Link></li>
+              <li><Link to='/about'>About</Link></li>
+              <li><Link to='/friends'>Friends</Link></li>
+            </ul>
+            <Route path='/' exact={true} component={Home} />
+            <Route path='/about' component={About} />
+            <Route path='/friends' component={Friends} />
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
