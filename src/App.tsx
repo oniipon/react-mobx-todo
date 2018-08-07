@@ -4,6 +4,7 @@ import './App.css';
 import logo from './logo.svg';
 
 import { Name } from './components/Name'; 
+import CountContainer from './containers/CountContainer'; 
 
 class App extends React.Component {
   public render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
         <Name member="Fumio SAGAWA"/>
+        <CountContainer />
       </div>
     );
   }
