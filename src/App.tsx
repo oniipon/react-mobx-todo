@@ -3,9 +3,19 @@ import './App.css';
 
 import logo from './logo.svg';
 
-import { Name } from './components/Name'; 
+// export class Name extends React.Component<INamePropType> {
+import { Name } from './components/Name';
+// export default class CountContainer extends React.Component {
+// It is not necessary to use '{}' if defined with default
 import CountContainer from './containers/CountContainer'; 
 
+/*
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+*/
 class App extends React.Component {
   public render() {
     return (
