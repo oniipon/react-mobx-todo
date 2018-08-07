@@ -17,12 +17,12 @@ export default class CountStore implements ICountStoreType {
   }
 
   @action.bound
-  public increment() {
+  public increment(): void {
     this.num = this.num + 1;
   }
 
   @action.bound
-  public decrement() {
+  public decrement(): void {
     this.num = this.num - 1;
   }
 }
