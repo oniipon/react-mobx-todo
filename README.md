@@ -44,6 +44,13 @@ Add the following item to tsconfig.json
     "experimentalDecorators": true
 ```
 
+## Add React Router
+
+```shell
+yarn add react-router-dom -S
+yarn add @types/react-router-dom -D
+```
+
 ## Generating a project using create-react-app
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
