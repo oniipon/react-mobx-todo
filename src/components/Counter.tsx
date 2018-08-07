@@ -17,8 +17,8 @@ class Counter extends React.Component<ICountPropType> {
       <div>
         <p>Counter : {count!.num}</p>
         <p>Double Count: {count!.doubleCount}</p>
-        <button onClick={count!.onIncrement}>+</button>
-        <button onClick={count!.onDecrement}>-</button>
+        <button onClick={count!.increment}>+</button>
+        <button onClick={count!.decrement}>-</button>
       </div>
     );
   }

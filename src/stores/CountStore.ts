@@ -2,27 +2,27 @@ import { action, computed, observable } from 'mobx';
 
 export interface ICountStoreType {
   num: number
-  doubleCount: () => void
-  onIncrement: () => void
-  onDecrement: () => void
+  doubleCount: number
+  increment: () => void
+  decrement: () => void
 };
 
-export default class CountStore {
+export default class CountStore implements ICountStoreType {
   @observable
   public num = 0;
 
   @computed
-  get doubleCount() {
+  get doubleCount(): number {
     return this.num * 2;
   }
 
   @action.bound
-  public onIncrement() {
+  public increment() {
     this.num = this.num + 1;
   }
 
   @action.bound
-  public onDecrement() {
+  public decrement() {
     this.num = this.num - 1;
   }
 }
