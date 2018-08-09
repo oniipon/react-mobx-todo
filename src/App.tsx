@@ -1,10 +1,24 @@
 import * as React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 
-import './App.css';
-
 import { About, Friends, Home } from './containers';
 
+import styled from 'styled-components';
+
+const Component = styled.div`
+{
+  text-align: center;
+  ul {
+    text-align: left;
+  }
+  .App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+}
+`;
 /*
 class Welcome extends React.Component {
   render() {
@@ -15,7 +29,7 @@ class Welcome extends React.Component {
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
+      <Component>
         <BrowserRouter>
           <div>
             <ul>
@@ -28,7 +42,7 @@ class App extends React.Component {
             <Route path='/friends' component={Friends} />
           </div>
         </BrowserRouter>
-      </div>
+      </Component>
     );
   }
 }
