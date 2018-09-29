@@ -1,3 +1,4 @@
-export * from './About';
-export * from './Friends';
-export * from './Home';
+export * from './about/About';
+export * from './friends/Friends';
+export * from './home/Home';
+export * from './todos/Todos';

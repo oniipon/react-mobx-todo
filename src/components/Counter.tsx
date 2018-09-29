@@ -1,7 +1,7 @@
 import * as React from 'react';
 
+import { ICountStoreType } from '@app/stores/CountStore';
 import { inject, observer } from 'mobx-react';
-import { ICountStoreType } from '../stores/CountStore';
 
 export interface ICountPropType {
   count?: ICountStoreType

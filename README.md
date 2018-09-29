@@ -51,6 +51,24 @@ yarn add react-router-dom -S
 yarn add @types/react-router-dom -D
 ```
 
+## 
+
+https://github.com/wmonk/create-react-app-typescript/issues/122#issuecomment-356390578
+
+```shell
+yarn add react-app-rewired -D
+```
+
+```json
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": [
+        "src/assets/*"
+      ]
+    },
+```
+
 ## Generating a project using create-react-app
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

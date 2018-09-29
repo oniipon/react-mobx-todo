@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import logo from './logo.svg';
+import logo from '@app/assets/images/logo.svg';
 
 export class About extends React.Component {
   public render() {

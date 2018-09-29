@@ -1,13 +1,12 @@
 import * as React from 'react';
 
-// import './Home.css';
-import logo from './logo.svg';
+import logo from '@app/assets/images/logo.svg';
 
 // export class Name extends React.Component<INamePropType> {
-import { Name } from '../components/Name';
+import { Name } from '@app/components/Name';
 // export default class CountContainer extends React.Component {
 // It is not necessary to use '{}' if defined with default
-import CountContainer from '../containers/CountContainer'; 
+import CountContainer from '@app/containers/counter/CountContainer'; 
 
 import styled from 'styled-components';
 
