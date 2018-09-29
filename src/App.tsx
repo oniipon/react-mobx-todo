@@ -19,13 +19,7 @@ const Component = styled.div`
   }
 }
 `;
-/*
-class Welcome extends React.Component {
-  render() {
-    return <h1>Hello, {this.props.name}</h1>;
-  }
-}
-*/
+
 class App extends React.Component {
   public render() {
     return (

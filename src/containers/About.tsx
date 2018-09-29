@@ -1,10 +1,18 @@
 import * as React from 'react';
 
+import logo from './logo.svg';
+
 export class About extends React.Component {
   public render() {
     return (
       <div>
-        <h2>About</h2>
+        <header>
+          <img src={logo} alt="logo" />
+          <h1>Welcome to React</h1>
+        </header>
+        <p>
+          To get started, edit <code>src/App.tsx</code> and save to reload.
+        </p>
       </div>
     );
   }

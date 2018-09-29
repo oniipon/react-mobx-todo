@@ -4,7 +4,7 @@ import { inject, observer } from 'mobx-react';
 import { ICountStoreType } from '../stores/CountStore';
 
 export interface ICountPropType {
-    count?: ICountStoreType
+  count?: ICountStoreType
 };
 
 @inject('count')

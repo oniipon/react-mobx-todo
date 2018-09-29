@@ -9,40 +9,44 @@ import { Name } from '../components/Name';
 // It is not necessary to use '{}' if defined with default
 import CountContainer from '../containers/CountContainer'; 
 
-
 import styled from 'styled-components';
 
-const Component = styled.div`
-.App-logo {
+const Component = styled.div `
+img {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
-> .App-header {
-  background-color: #2ff;
+header {
+  background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
 
-.App-title {
+h1 {
   font-size: 1.5em;
 }
 
-.App-intro {
+p {
   font-size: large;
 }
-`;
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+`
 
 export class Home extends React.Component {
   public render() {
     return (
       <Component>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+        <header>
+          <img className="App-logo-spin" src={logo} alt="logo" />
+          <h1>Welcome to React</h1>
         </header>
-        <p className="App-intro">
+        <p>
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
         <Name member="Fumio SAGAWA"/>
