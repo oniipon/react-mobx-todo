@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 
-import { About, Friends, Home } from '@app/containers';
+import { About, Friends, Home, Todos } from '@app/containers';
 
 import styled from 'styled-components';
 
@@ -30,10 +30,12 @@ class AppRouter extends React.Component {
               <li><Link to='/'>Home</Link></li>
               <li><Link to='/about'>About</Link></li>
               <li><Link to='/friends'>Friends</Link></li>
+              <li><Link to='/todos'>Todos</Link></li>
             </ul>
             <Route path='/' exact={true} component={Home} />
             <Route path='/about' component={About} />
             <Route path='/friends' component={Friends} />
+            <Route path='/todos' component={Todos} />
           </div>
         </BrowserRouter>
       </Component>

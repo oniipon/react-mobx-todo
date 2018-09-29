@@ -7,7 +7,7 @@ export interface ICountStoreType {
   decrement: () => void
 };
 
-export default class CountStore implements ICountStoreType {
+export class CountStore implements ICountStoreType {
   @observable
   public num = 0;
 
@@ -26,3 +26,5 @@ export default class CountStore implements ICountStoreType {
     this.num = this.num - 1;
   }
 }
+
+export default CountStore;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ICountStoreType } from '@app/stores/CountStore';
+import { ICountStoreType } from '@app/stores';
 import { inject, observer } from 'mobx-react';
 
 export interface ICountPropType {
@@ -9,7 +9,7 @@ export interface ICountPropType {
 
 @inject('count')
 @observer
-class Counter extends React.Component<ICountPropType> {
+export class Counter extends React.Component<ICountPropType> {
   public render() {
     const { count } = this.props;
 
@@ -23,5 +23,3 @@ class Counter extends React.Component<ICountPropType> {
     );
   }
 }
-
-export default Counter;

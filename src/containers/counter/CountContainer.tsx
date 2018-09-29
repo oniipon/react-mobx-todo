@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import Counter from '@app/components/Counter';
-import CountStore from '@app/stores/CountStore';
+import { Counter } from '@app/components';
+import { CountStore } from '@app/stores';
 import { Provider } from 'mobx-react';
 
 // create store
