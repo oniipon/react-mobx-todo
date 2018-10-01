@@ -1,16 +1,13 @@
 import * as React from 'react';
 
+import TodoList from './TodoList';
+import TodoListView from './TodoListView';
+
+const store = new TodoList();
 export class Todos extends React.Component {
   public render() {
     return (
-      <div>
-        <header>
-          <h1>Welcome to React</h1>
-        </header>
-        <p>
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
-    );
+      <TodoListView todoList={ store } />
+    )
   }
 }
