@@ -4,46 +4,46 @@ import { observer } from 'mobx-react';
 import Todo from './Todo';
 
 interface IProps {
-  todoList: ITodoList
+  todoList: ITodoList;
 }
 
 interface ITodoList {
-  todos: Todo[],
-  unfinishedTodoCount: number
+  todos: Todo[];
+  unfinishedTodoCount: number;
 }
 
 @observer
-export default class TodoListView extends React.Component<IProps>  {
+export default class TodoListView extends React.Component<IProps> {
   public render() {
     return (
       <div>
         <ul>
-          {
-            this.props.todoList.todos.map(
-              todo =>
-              <TodoView todo={ todo } key={ todo.id } />
-            )
-          }
+          {this.props.todoList.todos.map(todo => (
+            <TodoView todo={todo} key={todo.id} />
+          ))}
         </ul>
         Tasks left: {this.props.todoList.unfinishedTodoCount}
       </div>
-    )
+    );
   }
 }
 
-const TodoView = observer(({ todo }) =>
+const TodoView = observer(({ todo }) => (
   <li>
     <input
       type="checkbox"
-      checked={ todo.finished }
-      onClick={ handleOnClick.bind(todo) }
-      data-message={ todo }
-    />{todo.title}
+      checked={todo.finished}
+      // tslint:disable-next-line:jsx-no-lambda
+      onClick={e => handleOnClick(e, todo)}
+      data-message={todo}
+    />
+    {todo.title}
   </li>
-)
+));
 
 const handleOnClick = (event: React.MouseEvent<HTMLElement>, todo: Todo) => {
   console.log('todo.finished = !todo.finished');
+  console.log(todo);
   // event.target.getAttribute('data-message')
-  // todo.finished = !todo.finished
-}
+  todo.finished = !todo.finished;
+};
