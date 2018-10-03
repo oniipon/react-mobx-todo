@@ -7,7 +7,7 @@ import { inject, observer } from 'mobx-react';
 interface IProps {
   todoList: TodoStore;
 }
-@inject()
+@inject('todoList')
 @observer
 export default class TodoListView extends React.Component<IProps> {
   public render() {
@@ -17,10 +17,12 @@ export default class TodoListView extends React.Component<IProps> {
           {this.props.todoList.todos.map((todo, index) => {
             return (
               <li key={todo.id}>
-                <input type="checkbox" checked={todo.finished}
+                <input
+                  type="checkbox"
+                  checked={todo.finished}
                   data-message={todo}
                   // tslint:disable-next-line:jsx-no-lambda
-                  onChange={e=>this.props.todoList.change_finished(index)}
+                  onChange={e => this.props.todoList.change_finished(index)}
                 />
               </li>
               // return ( <TodoView
