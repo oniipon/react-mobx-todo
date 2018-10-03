@@ -1,8 +1,7 @@
-import { computed, observable } from 'mobx';
+import Todo from '@app/containers/todos/Todo';
+import { action, computed, observable } from 'mobx';
 
-import Todo from './Todo';
-
-export default class TodoList {
+export class TodoStore {
   @observable
   public todos: Todo[] = [
     {
@@ -17,8 +16,15 @@ export default class TodoList {
     }
   ];
 
+  @action.bound
+  public change_finished(i: number) {
+    this.todos[i].finished = !this.todos[i].finished;
+  }
+
   @computed
   public get unfinishedTodoCount() {
     return this.todos.filter(todo => !todo.finished).length;
   }
 }
+
+export default TodoStore;
